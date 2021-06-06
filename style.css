@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 500px;
+  height: 10rem;
+}
+hr {
+  margin: 5px 0px;
+  width: 20%;
+  border: solid rgb(255, 79, 60) 2px;
+  border-radius: 5px;
+}
+.pizza-section {
+  /* form section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pizza-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  width: 50%;
+}
+h3 {
+  margin-top: 10px;
+  color: rgb(255, 79, 60);
+}
+label {
+  margin: 8px 3px 3px 2px;
+}
+input {
+  font-size: 1.1rem;
+  padding: 3px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+input[type="radio"] {
+  /*default radio button is hidden*/
+  /*position: relative;*/
+  opacity: 0;
+  margin: 20px 0px;
+}
+input[type="radio"]:checked ~ .check {
+  /*radio button changes collor when checked*/
+  border: 5px solid rgb(255, 79, 60);
+}
+.check {
+  /* custom radio button */
+  position: relative;
+  pointer-events: none;
+  border: 5px solid #aaaaaa;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: -36px;
+  left: 0.4px;
+  z-index: 5;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
+}
+select {
+  font-size: 1.1rem;
+  padding: 3px;
+}
+.pizzaImages {
+  /* pizza image options */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.pizza-option {
+  /* each pizza image option */
+  margin: 5px;
+  max-width: 100px;
+  height: auto;
+  border: solid 3px rgb(255, 79, 60);
+  border-radius: 50px;
+}
+
+.pizzaCheck {
+  /* pizza radio buttons */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#add-pizza {
+  /* form submit button */
+  background: none;
+  border-radius: 5px;
+  border: solid rgb(255, 79, 60) 3px;
+  color: rgb(255, 79, 60);
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-style: uppercase;
+  cursor: pointer;
+}
+#add-pizza:hover {
+  background-color: rgb(255, 79, 60);
+  color: white;
+}
+span {
+  color: rgb(255, 79, 60);
+}
+a {
+  font-size: 1.1rem;
+  color: rgb(255, 79, 60);
+  margin-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(201, 66, 51);
+  text-decoration: underline;
+}
+.alert {
+  /*pizza added alert*/
+  font-size: 1.2rem;
+  margin: 5px 0px;
+  opacity: 0;
+}
+.sort {
+  /* sorting select */
+  margin-top: 10px;
+}
+.pepper img {
+  width: 50px;
+  height: 50px;
+}
+
+.menu-section {
+  /* pizza menu section */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.menu-section h3 {
+  font-size: 1.5rem;
+  margin: 20px 0px;
+}
+.pizza-div {
+  /* pizza information */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pizza-div img {
+  border: 3px solid rgb(201, 66, 51);
+  border-radius: 100%;
+  max-width: 400px;
+}
+.cross div {
+  /* delete pizza button*/
+  position: relative;
+  top: -550px;
+  left: 180px;
+  cursor: pointer;
+}
+.cross img {
+  border: none;
+  width: 50px;
+  position: relative;
+  top: -550px;
+  left: 180px;
+  cursor: pointer;
+}
+.cross img:hover {
+  border: solid rgb(201, 66, 51) 1px;
+}
+.pepper {
+  margin-top: -50px;
+}
+.pepper img {
+  border: none;
+  width: 100px;
+  height: 100%;
+}
+h4 {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+p {
+  font-size: 1.1rem;
+}
+footer {
+  text-align: center;
+}
+
+/* responsive design rules */
+
+@media only screen and (max-width: 425px) {
+  .pizza-div img {
+    max-width: 300px;
+  }
+  .sort {
+    margin-top: 25px;
+  }
+  .cross img {
+    top: -500px;
+    left: 130px;
+  }
+  .pizza-option {
+    max-width: 80px;
+  }
+  .pizza-form {
+    width: 100%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .pizza-form {
+    width: 100%;
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .pizza-form {
+    width: 100%;
+    margin-left: 50%;
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Front-End Developer Task by Marius Krenevicius</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pizzeria <span>Visma</span></h1>
+      <hr />
+      <h2>Add a new Pizza to the restaurant menu!</h2>
+    </header>
+    <main>
+      <section class="pizza-section">
+        <form class="pizza-form">
+          <label for="name">Pizza name</label>
+          <input type="text" name="name" id="name" maxlength="30" required />
+          <label for="price">Price</label>
+          <input
+            type="number"
+            name="price"
+            id="price"
+            step=".01"
+            min="0"
+            required
+          />
+          <label for="heat">Spice level</label>
+          <input type="number" name="heat" id="heat" min="1" max="3" />
+          <h3>Select your toppings</h3>
+          <label for="option-1">Option 1</label>
+          <select name="option-1" id="option-1" value="First topping" required>
+            <option default>First topping</option>
+            <option value="salami">Salami</option>
+            <option value="bacon">Bacon</option>
+          </select>
+          <label for="option-2">Option 2</label>
+          <select name="option-2" id="option-2" value="Second topping" required>
+            <option default>Second topping</option>
+            <option value="tomato">Tomato</option>
+            <option value="pickles">Pickles</option>
+          </select>
+          <h3>Choose an image for your pizza!</h3>
+          <div class="pizzaImages">
+            <div class="pizzaCheck">
+              <img
+                src="./images/BA-Perfect-Pizza.jpg"
+                class="pizza-option"
+                alt="bacon pizza"
+              />
+              <input
+                type="radio"
+                name="image"
+                id="image"
+                value="BA-Perfect-Pizza"
+              />
+              <div class="check"></div>
+            </div>
+            <div class="pizzaCheck">
+              <img src="/images/bbq.jpg" class="pizza-option" alt="bbq-pizza" />
+              <input type="radio" name="image" id="image" value="bbq" />
+              <div class="check"></div>
+            </div>
+            <div class="pizzaCheck">
+              <img
+                src="./images/Grilled-Pizza.jpg"
+                class="pizza-option"
+                alt="grilled pizza"
+              />
+              <input
+                type="radio"
+                name="image"
+                id="image"
+                value="Grilled-Pizza"
+              />
+              <div class="check"></div>
+            </div>
+            <div class="pizzaCheck">
+              <img
+                src="./images/salami.jpg"
+                class="pizza-option"
+                alt="salami pizza"
+              />
+              <input type="radio" name="image" id="image" value="salami" />
+              <div class="check"></div>
+            </div>
+          </div>
+          <input type="submit" id="add-pizza" value="ADD PIZZA" />
+        </form>
+        <a href="./menu.html">Checkout the menu</a>
+        <p class="alert">Pizza added!</p>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
